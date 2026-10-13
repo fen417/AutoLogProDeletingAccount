@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="How to request deletion of your AutoLog Pro account and associated data. / Как удалить аккаунт AutoLog Pro и связанные с ним данные.">
+  <title>AutoLog Pro — Account &amp; Data Deletion</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f172a;
+      --surface: #172338;
+      --surface-raised: #1e293b;
+      --line: #334155;
+      --text: #f8fafc;
+      --muted: #a8b5c7;
+      --amber: #f59e0b;
+      --teal: #14b8a6;
+      --blue: #91a9c2;
+      --radius: 22px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-width: 320px;
+      margin: 0;
+      background: radial-gradient(ellipse at 50% -18%, #26364b 0, transparent 48%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--amber); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
+    .shell { width: min(100% - 36px, 920px); margin-inline: auto; }
+    header { padding: 28px 0 18px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; font-weight: 750; letter-spacing: -.025em; }
+    .brand-mark {
+      display: grid; width: 44px; height: 44px; place-items: center; border-radius: 15px;
+      background: linear-gradient(145deg, #ffbd3d, var(--amber)); color: #172033; font-weight: 900; font-size: 18px;
+      box-shadow: 0 8px 24px #f59e0b30;
+    }
+    .language { display: inline-flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: #111c30; }
+    .language button { border: 0; border-radius: 999px; padding: 7px 12px; background: transparent; color: var(--muted); font: inherit; font-size: 13px; cursor: pointer; }
+    .language button[aria-pressed="true"] { background: var(--surface-raised); color: var(--text); }
+    main { padding: 42px 0 72px; }
+    .eyebrow { margin: 0 0 12px; color: var(--teal); font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(36px, 7vw, 62px); line-height: 1.06; letter-spacing: -.055em; }
+    .intro { max-width: 690px; margin: 20px 0 0; color: var(--muted); font-size: clamp(16px, 2vw, 19px); }
+    .hero-card {
+      position: relative; overflow: hidden; margin-top: 38px; padding: clamp(24px, 5vw, 42px);
+      border: 1px solid #44536a; border-radius: 28px;
+      background: linear-gradient(135deg, #202e43 0%, #172338 78%);
+      box-shadow: 0 24px 70px #02061766;
+    }
+    .hero-card::after { content: ""; position: absolute; width: 240px; height: 240px; right: -95px; top: -125px; border: 1px solid #14b8a635; border-radius: 50%; box-shadow: 0 0 0 24px #14b8a610, 0 0 0 48px #14b8a608; pointer-events: none; }
+    .hero-card h2 { margin: 0; font-size: clamp(22px, 3vw, 30px); letter-spacing: -.035em; }
+    .hero-card > p { max-width: 650px; margin: 10px 0 0; color: var(--muted); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 26px 0 0; padding: 0; list-style: none; counter-reset: step; }
+    .steps li { min-height: 156px; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: #0f172a80; counter-increment: step; }
+    .steps li::before { content: "0" counter(step); display: block; margin-bottom: 12px; color: var(--amber); font-size: 12px; font-weight: 850; letter-spacing: .1em; }
+    .steps strong { display: block; margin-bottom: 5px; }
+    .steps span { color: var(--muted); font-size: 14px; }
+    .mail-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: 24px; padding: 14px 20px; border-radius: 14px; background: var(--amber); color: #172033; text-decoration: none; font-weight: 800; box-shadow: 0 10px 26px #f59e0b30; transition: transform .18s ease, box-shadow .18s ease; }
+    .mail-button:hover { transform: translateY(-2px); box-shadow: 0 14px 34px #f59e0b40; }
+    .mail-button svg { width: 19px; height: 19px; }
+    .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+    .info-card { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, #1e293b, #172338); }
+    .info-card h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 9px; font-size: 17px; }
+    .info-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .info-card svg { flex: 0 0 auto; width: 20px; height: 20px; color: var(--teal); }
+    .contact { margin-top: 20px; padding: 22px; border: 1px solid #14b8a64a; border-radius: var(--radius); background: #0d94881a; }
+    .contact p { margin: 0; color: var(--muted); }
+    .contact a { font-weight: 750; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    footer { padding: 22px 0 34px; border-top: 1px solid #334155a8; color: #8d9bb0; font-size: 13px; }
+    footer .shell { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    [hidden] { display: none !important; }
+    @media (max-width: 680px) {
+      .shell { width: min(100% - 28px, 920px); }
+      header { padding-top: 18px; }
+      main { padding-top: 35px; }
+      .steps, .section-grid { grid-template-columns: 1fr; }
+      .steps li { min-height: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell topbar">
+      <a class="brand" href="#top" aria-label="AutoLog Pro home">
+        <span class="brand-mark" aria-hidden="true">A</span><span>AutoLog Pro</span>
+      </a>
+      <nav class="language" aria-label="Language selection">
+        <button type="button" data-language="ru" aria-pressed="true">RU</button>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </header>
+  <main class="shell" id="top">
+    <section lang="ru" data-content="ru">
+      <p class="eyebrow">Помощь и конфиденциальность</p>
+      <h1>Удаление аккаунта и данных</h1>
+      <p class="intro">Вы можете запросить удаление аккаунта AutoLog Pro и связанных с ним данных, отправив письмо с адреса электронной почты, указанного в аккаунте.</p>
+      <div class="hero-card">
+        <h2>Как удалить аккаунт</h2>
+        <p>Отправьте запрос на нашу почту. Чтобы мы могли найти аккаунт и проверить, что запрос отправил его владелец, укажите следующие данные:</p>
+        <ol class="steps">
+          <li><strong>Напишите с почты аккаунта</strong><span>Используйте адрес, с которым вы входите в AutoLog Pro.</span></li>
+          <li><strong>Укажите тему письма</strong><span>«AutoLog Pro — удаление аккаунта».</span></li>
+          <li><strong>Добавьте данные аккаунта</strong><span>Укажите email аккаунта. UID Firebase можно добавить, если он вам известен.</span></li>
+        </ol>
+        <a class="mail-button" href="mailto:fen559256@gmail.com?subject=AutoLog%20Pro%20%E2%80%94%20%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82%D0%B0&body=%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C%20%D0%BC%D0%BE%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82%20AutoLog%20Pro.%0A%0AEmail%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82%D0%B0%3A%20">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 5 9 7 9-7M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
+          Отправить запрос по email
+        </a>
+      </div>
+      <div class="section-grid">
+        <article class="info-card">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg>Что будет удалено</h2>
+          <p>После проверки запроса мы удалим аккаунт Firebase Authentication и связанные с ним данные AutoLog Pro, хранящиеся в облаке. В ответном письме подтвердим выполнение запроса.</p>
+        </article>
+        <article class="info-card">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>Важно</h2>
+          <p>Не указывайте пароль и не отправляйте коды подтверждения. Удаление приложения с телефона само по себе не удаляет облачный аккаунт и данные — для этого отправьте запрос.</p>
+        </article>
+      </div>
+      <div class="contact"><p>Если вы больше не имеете доступа к адресу аккаунта, напишите нам и опишите ситуацию. Мы запросим информацию, необходимую для проверки владельца аккаунта. <a href="mailto:fen559256@gmail.com">fen559256@gmail.com</a></p></div>
+    </section>
+
+    <section lang="en" data-content="en" hidden>
+      <p class="eyebrow">Help &amp; privacy</p>
+      <h1>Account and data deletion</h1>
+      <p class="intro">You can request deletion of your AutoLog Pro account and associated data by emailing us from the email address registered to your account.</p>
+      <div class="hero-card">
+        <h2>How to request deletion</h2>
+        <p>Email us so we can locate the account and verify that the request comes from its owner. Please include:</p>
+        <ol class="steps">
+          <li><strong>Write from your account email</strong><span>Use the address you use to sign in to AutoLog Pro.</span></li>
+          <li><strong>Set the subject</strong><span>“AutoLog Pro — account deletion”.</span></li>
+          <li><strong>Identify your account</strong><span>Include your account email. You may also include your Firebase UID if you know it.</span></li>
+        </ol>
+        <a class="mail-button" href="mailto:fen559256@gmail.com?subject=AutoLog%20Pro%20%E2%80%94%20account%20deletion&body=Please%20delete%20my%20AutoLog%20Pro%20account.%0A%0AAccount%20email%3A%20">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 5 9 7 9-7M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
+          Email a deletion request
+        </a>
+      </div>
+      <div class="section-grid">
+        <article class="info-card">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg>What will be deleted</h2>
+          <p>After we verify the request, we will delete the Firebase Authentication account and associated AutoLog Pro data stored in the cloud. We will confirm the request by email when it is complete.</p>
+        </article>
+        <article class="info-card">
+          <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>Please note</h2>
+          <p>Do not include your password or verification codes. Uninstalling the app does not by itself delete your cloud account or data; email us to request deletion.</p>
+        </article>
+      </div>
+      <div class="contact"><p>If you no longer have access to your account email, contact us and explain the situation. We will ask for information needed to verify account ownership. <a href="mailto:fen559256@gmail.com">fen559256@gmail.com</a></p></div>
+    </section>
+  </main>
+  <footer><div class="shell"><span>© <span id="year"></span> AutoLog Pro</span><span>Account &amp; data deletion</span></div></footer>
+  <script>
+    (() => {
+      const buttons = [...document.querySelectorAll('[data-language]')];
+      const sections = [...document.querySelectorAll('[data-content]')];
+      function setLanguage(language) {
+        document.documentElement.lang = language;
+        sections.forEach(section => { section.hidden = section.dataset.content !== language; });
+        buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
+        try { localStorage.setItem('autolog-language', language); } catch { /* Storage may be disabled. */ }
+      }
+      buttons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+      let savedLanguage = 'ru';
+      try { savedLanguage = localStorage.getItem('autolog-language') || 'ru'; } catch { /* Use Russian by default. */ }
+      setLanguage(savedLanguage === 'en' ? 'en' : 'ru');
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
